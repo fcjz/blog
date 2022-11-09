@@ -1,5 +1,6 @@
 # blog
-a blog by fcjz.
+
+This is a blog by fcjz.
 
 使用hugo-monochrome主题，这是一个比较注重内容的主题。
 
@@ -12,5 +13,3 @@ a blog by fcjz.
 [blog](https://github.com/fcjz/blog/blob/master/blog.png)
 
 好吧，笔者承认，目前博客非常简陋，暂时无法布置成主题示例网站那样美观，不过麻雀虽小，五脏俱全，一个博客该有的是挺齐全了。
-
-待补，笔者实在是无法拿出时间来撰写readme了。
