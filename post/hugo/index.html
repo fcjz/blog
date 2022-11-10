@@ -25,44 +25,8 @@
     
 
     
-
+    <meta name="author" content="fcjz" />
     
-        <meta property="og:title" content="使用Hugo制作博客" />
-<meta property="og:description" content="hugo
-当今时代，我认为拥有一个独特的博客是十分有趣且重要的，详情请看之前的“简中互联网的产出枯萎了吗？”的博文，我在其中写到了很多有关博客的资料。
-那么我们现在进入正题，今天的主角是Hugo。
-PS：本文主要面向Windows用户、独立开发者、开源工作者以及想要拥有一个博客的普通用户。
-命令行终端推荐使用cmder或者git bash。
-我在“About Me”这篇博文中提到过这个博客是使用Hugo制作的，那么Hugo究竟是什么呢？它与同类工具相比有哪些优势和劣势？怎样使用它创建一个属于自己的博客呢？
-Hugo Hugo是一个开源的静态网站生成器，简单好用，方便快速、生态丰富，被许多开发者用来搭建博客。我想了想，在我接触过的网站生成器中（Hugo、Hexo、Gridea、Jekyll、Ghost、wordpress、typecho……），目前能够和Hugo比肩的，只有Hexo和wordpress，然而，Hexo配置环境麻烦，博文达到一定数量之后性能会明显下降；wordpress需要使用者购买服务器（wordpress生成的是动态网站），大多数年轻的开发者没有精力和财力去维护这样一个博客，他们只是偶尔记录些什么（不过，如果在看本文的你手头上有闲置的服务器，并且是一个对功能要求比较高的用户，那么wordpress是个很好的选择——功能丰富、易于维护、适合新手）。
-让我提出几个问题，如果你对下面问题的回答是肯定的，那么我非常欢迎你继续看下去，因为这样的话，Hugo非常适合你：
-你是否要写许多博文，并且持续维护这个博客？ 你是否希望在博文数量达到一定程度的时候生成器的性能不会受到很大影响？ 你是否讨厌配置环境（有些生成器工作需要配合其它工具，安装那些工具的过程我们叫做配置环境）？ 你是否有一定的“折腾能力”（评论之类的功能需要你自己挖掘实现）？ 你是否希望能够快速完成建立博客这个过程（笔者花了半个小时左右）（如果你不想添加别的什么功能，只想写博文的话）？ 我们假设你对它们的回答是肯定的，为了让你更清楚Hugo与其它生成器的优点和缺点（好吧，这里的优点和缺点也都是针对笔者的需求而言的），我们先来对比一下。
-Hugo与同类工具相比的优势和劣势 目前已经没有多少人用jekyll了，大多数开发者会选择hugo和hexo，所以网上对比比较多的也是它们，笔者也主要将这两者做对比。
-搭建方面 Hugo只是一个用Go语言编写的二进制文件，开箱即用，只要使用者拥有服务器或GitHub账号，就可以轻松生成。
-Hexo需要配置环境（Nodejs和git），相比Hugo略显麻烦。
-生态方面 Hugo的主题没有Hexo多（只是少十几个），在国内教程较少，英文文档并不易懂，写的稍烂。
-Hexo主题稍微多一些，在国内教程较多（在知乎就能见到不少标题为“GitHub&#43;Hexo半小时免费搭建博客”之类的文章），文档虽然说不上好读，但胜在生态丰富，很多人帮着讲解。
-性能方面 Hugo的性能要显著高于jekyll和Hexo，曾经有人做过实验，这三种生成器生成585篇文章，分别需要的时间（单位：秒）为：
-Jekyll: 15.90 Hugo: 4.90 Hexo的数据应当介于二者之间。 之所以会出现差距，是因为这三种生成器使用的语言不同，准确的说，是语言类型不同。
-Hugo使用Go（编译型语言）；Hexo使用nodejs（解释型语言）；jekyll使用ruby（解释型语言）。
-编译型语言执行效率高于解释型语言，而同为解释型语言，nodejs的V8引擎比ruby要快。
-费用方面 Hugo、Hexo、Jekyll都是开源免费的工具，从搭建到维护不需要花费任何费用。
-wordpress据说是很好的工具，不过我并没有深入使用过，这也是今天在这篇博文中我没怎么写到它的原因，既然我不够了解它，无法判断优劣，也就不在这里乱写。
-我之所以无法投入使用这款工具，是因为使用它搭建网站需要服务器，而我暂时没有钱来购买，等到我日后有了一定的使用经验，再回到这篇博文来补充。
-使用Hugo创建网站 相信能看到这里的你一定是决定了使用Hugo创建网站的人，所以我们开始。
-安装Hugo Windows安装，可以去到GitHub，链接在此。
-如果你不会使用GitHub，请在最新版本下的Assets中选择与自己电脑对应的安装包，单击，选择好安装位置，就可以开始下载了。（建议下载扩展版本，因为很多漂亮的主题都需要扩展版本中的sass等）
-下载完毕后打开文件夹应该会看到hugo的zip文件，使用解压工具（如7-zip）解压缩文件，得到hugo.exe，之后要将hugo.exe复制到建立的网站的目录中。
-官网文档中还有其它的下载方式，不过，我觉得用scoop等包管理器下载要更难一些……还是只说这一种吧，最简单了。
-终端操作 打开cmder等终端工具，cd至hugo的工作目录，输入hugo version命令，检查hugo版本，如果出现一串号码（例如：hugo v0.101.0-466fa43c16709b4483689930a4f9ac8add5c9f66&#43;extended windows/amd64 BuildDate=2022-06-16T07:09:16Z VendorInfo=gohugoio），说明你安装成功了，可以输入hugo help获取帮助，查看所有命令参数，不过看看就好，很多的命令，初学者用不上，如果只是使用hugo撰写博客的话，只需要记住诸如hugo new post 、hugo之类就可以了。
-version
-输入hugo help出现的参数如下：
-hugo is the main command, used to build your Hugo site." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://fcjz.github.io/blog/post/hugo/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-10-23T14:33:34+08:00" />
-<meta property="article:modified_time" content="2022-10-23T14:33:34+08:00" />
-
 
     
 
@@ -118,10 +82,11 @@ hugo is the main command, used to build your Hugo site."/>
 
 
 
-    <script defer src="/blog/js/zooming.684b5d075bf94d0adfa21a7e7eb9acec1ddfb2e7b47d6657981617f0db0cf50949f1172801595afa3051f51b28d67f6a2d0c41be677b59b564307d9dbe4a4fd2.js" integrity="sha512-aEtdB1v5TQrfohp&#43;frms7B3fsue0fWZXmBYX8NsM9QlJ8RcoAVla&#43;jBR9Rso1n9qLQxBvmd7WbVkMH2dvkpP0g=="></script>
 
 
 
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="/blog/js/math.d7efde37b2eb8879651e1f4489bcd4d8203b8c2bf8ca12c9e1b8cd11bfd6395b172f4999fff43ce0d047889a2bdb71ee74aebbae5327590192d1144e790fcd7b.js" integrity="sha512-1&#43;/eN7LriHllHh9EibzU2CA7jCv4yhLJ4bjNEb/WOVsXL0mZ//Q84NBHiJor23HudK67rlMnWQGS0RROeQ/New=="></script>
 
 
 
@@ -134,6 +99,11 @@ hugo is the main command, used to build your Hugo site."/>
     
 
 
+
+    
+    
+    
+    <script defer src="/blog/js/search-en-us.b4b03ba60fe680c745ad446c80b79fd2ba28c54b1877609142fab4afc1d164566fa254855c7f1f31fcbb0be62a5faa81d8a0c8f49e2e00e7c41faa9e1ddab71b.js" integrity="sha512-tLA7pg/mgMdFrURsgLef0rooxUsYd2CRQvq0r8HRZFZvolSFXH8fMfy7C&#43;YqX6qB2KDI9J4uAOfEH6qeHdq3Gw=="></script>
 
 
 
@@ -156,6 +126,23 @@ hugo is the main command, used to build your Hugo site."/>
             <svg id="light_mode_btn" class="hidden toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></svg>
         </div>
 
+        
+            <div id="search_tool">
+                <svg id="search_btn" class="toolbox-btn" width="18px" height="18px" viewBox="0 0 24 24"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></svg><div id="search_menu_wrapper" class="hidden">
+    <div id="search_menu">
+        <div id="search_menu_toolbar">
+            <div id="search_menu_input_wrapper">
+                <input id="search_menu_input" type="text" placeholder='Search Posts'>
+            </div>
+            <div id="search_menu_close_btn">
+                <svg width="18px" height="18px" viewBox="0 0 24 24"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></svg>
+            </div>
+        </div>
+        <div id="search_menu_results">
+        </div>
+    </div>
+</div>
+</div>
         
 
         
@@ -370,6 +357,10 @@ version     Print the version number of Hugo</p>
                     
                 
             </div>
+<footer>
+    <article>Copyright © 2022 by fcjz</article>
+</footer>
+
 </main>
     </body>
 </html>

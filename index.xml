@@ -6,7 +6,16 @@
     <description>Recent content on fcjz-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Oct 2022 14:33:34 +0800</lastBuildDate><atom:link href="https://fcjz.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Nov 2022 17:23:56 +0800</lastBuildDate><atom:link href="https://fcjz.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Me</title>
+      <link>https://fcjz.github.io/blog/post/me/</link>
+      <pubDate>Thu, 10 Nov 2022 17:23:56 +0800</pubDate>
+      
+      <guid>https://fcjz.github.io/blog/post/me/</guid>
+      <description>这篇文章明天再写。</description>
+    </item>
+    
     <item>
       <title>使用Hugo制作博客</title>
       <link>https://fcjz.github.io/blog/post/hugo/</link>
