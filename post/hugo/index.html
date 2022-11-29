@@ -69,6 +69,19 @@ hugo is the main command, used to build your Hugo site."/>
 
 
 
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'fcjz', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
 
     
     <script>
@@ -148,11 +161,35 @@ hugo is the main command, used to build your Hugo site."/>
         
     </div>
 </header>
-<nav id="navbar" class="pure-menu"><ul class="pure-menu-list"></ul>
+<nav id="navbar" class="pure-menu"><ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/blog/about/" class="pure-menu-link">about</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/blog/library/" class="pure-menu-link">library</a>
+                    
+                </li><li class="navbar-item pure-menu-item insection">
+                    
+                        <a href="/blog/post/" class="pure-menu-link">post</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/blog/now/" class="pure-menu-link">now</a>
+                    
+                </li></ul>
 </nav>
 <div id="sidebar_canvas_overlay" class="hidden"></div>
 <div id="sidebar" class="close">
-    <ul></ul>
+    <ul><li>
+                    <a href="/blog/about/">about</a>
+                </li><li>
+                    <a href="/blog/library/">library</a>
+                </li><li>
+                    <a href="/blog/post/">post</a>
+                </li><li>
+                    <a href="/blog/now/">now</a>
+                </li></ul>
 </div><div id="content" class="content-margin">
                 
     
@@ -354,7 +391,29 @@ version     Print the version number of Hugo</p>
 
 
                 
-                    
+                    <div class="content-margin">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fcjz" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
                 
             </div>
 <footer>

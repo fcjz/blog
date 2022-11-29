@@ -22,7 +22,11 @@
     <title>fcjz-blog</title>
 
     
+    <meta name="description" content="a blog by fcjz" />
+    
 
+    
+    <meta name="keywords" content="fcjz,blog,notebox,hugo,programming,philosophy,theory,post" />
     
 
     
@@ -33,14 +37,27 @@
 
     
         <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="fcjz-blog"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="a blog by fcjz"/>
 
     <link rel="stylesheet" href="/blog/style.min.5297c96c59a52afaa5bcda4a6cedf3813081f64025c209b25b2ee6d0c8f74d462b625ad3404a92a14d7a51b4ec0a420337ae70f426fa4bce2d5f7459a3ca7274.css" integrity="sha512-UpfJbFmlKvqlvNpKbO3zgTCB9kAlwgmyWy7m0Mj3TUYrYlrTQEqSoU16UbTsCkIDN65w9Cb6S84tX3RZo8pydA==">
 
 
 
 
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'fcjz', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
 
     
     <script>
@@ -113,136 +130,135 @@
         
     </div>
 </header>
-<nav id="navbar" class="pure-menu"><ul class="pure-menu-list"></ul>
+<nav id="navbar" class="pure-menu"><ul class="pure-menu-list"><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/blog/about/" class="pure-menu-link">about</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/blog/library/" class="pure-menu-link">library</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/blog/post/" class="pure-menu-link">post</a>
+                    
+                </li><li class="navbar-item pure-menu-item ">
+                    
+                        <a href="/blog/now/" class="pure-menu-link">now</a>
+                    
+                </li></ul>
 </nav>
 <div id="sidebar_canvas_overlay" class="hidden"></div>
 <div id="sidebar" class="close">
-    <ul></ul>
+    <ul><li>
+                    <a href="/blog/about/">about</a>
+                </li><li>
+                    <a href="/blog/library/">library</a>
+                </li><li>
+                    <a href="/blog/post/">post</a>
+                </li><li>
+                    <a href="/blog/now/">now</a>
+                </li></ul>
 </div><div id="content" class="content-margin">
                 
 
+    <div class="balloon-layout">
+        
 
 
 
+<div class="balloon-head-item">
+    
+    <div class="balloon-head-item-desktop">
+        <div class="balloon-head-item-img-light">
+            
+    <div class="balloon-head-item-img">
+        <img alt="balloon_head" src='/blog/icons/x.svg' >
+    </div>
 
 
-<div class="postcard-layout content-margin">
-    
-        <a href="https://fcjz.github.io/blog/post/me/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>Me</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>这篇文章明天再写。</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2022/11/10 · 
-    
-        
-    
+        </div>
+        <div class="balloon-head-item-img-dark">
+            
+    <div class="balloon-head-item-img">
+        <img alt="balloon_head" src='/blog/icons/x_dark.svg' >
+    </div>
 
-    
-        
-            <span>Posts</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="https://fcjz.github.io/blog/post/hugo/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>使用Hugo制作博客</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>hugo
-当今时代，我认为拥有一个独特的博客是十分有趣且重要的，详情请看之前的“简中互联网的产出枯萎了吗？”的博文，我在其中写到了很多有关博客的资料。
-那么我们现在进入正题，今天的主角是Hugo。
-PS：本文主要面向Windows用户、独立开发者、开源工作者以及想要拥有一个博客的普通用户。
-命令行终端推荐使用cmder或者git bash。
-我在“About Me”这篇博文中提到过这个博客是使用Hugo制作的，那么Hugo究竟是什么呢？它与同类工具相比有哪些优势和劣势？怎样使用它创建一个属于自己的博客呢？
-Hugo Hugo是一个开源的静态网站生成器，简单好用，方便快速、生态丰富，被许多开发者用来搭建博客。我想了想，在我接触过的网站生成器中（Hugo、Hexo、Gridea、Jekyll、Ghost、wordpress、typecho……），目前能够和Hugo比肩的，只有Hexo和wordpress，然而，Hexo配置环境麻烦，博文达到一定数量之后性能会明显下降；wordpress需要使用者购买服务器（wordpress生成的是动态网站），大多数年轻的开发者没有精力和财力去维护这样一个博客，他们只是偶尔记录些什么（不过，如果在看本文的你手头上有闲置的服务器，并且是一个对功能要求比较高的用户，那么wordpress是个很好的选择——功能丰富、易于维护、适合新手）。
-让我提出几个问题，如果你对下面问题的回答是肯定的，那么我非常欢迎你继续看下去，因为这样的话，Hugo非常适合你：
-你是否要写许多博文，并且持续维护这个博客？ 你是否希望在博文数量达到一定程度的时候生成器的性能不会受到很大影响？ 你是否讨厌配置环境（有些生成器工作需要配合其它工具，安装那些工具的过程我们叫做配置环境）？ 你是否有一定的“折腾能力”（评论之类的功能需要你自己挖掘实现）？ 你是否希望能够快速完成建立博客这个过程（笔者花了半个小时左右）（如果你不想添加别的什么功能，只想写博文的话）？ 我们假设你对它们的回答是肯定的，为了让你更清楚Hugo与其它生成器的优点和缺点（好吧，这里的优点和缺点也都是针对笔者的需求而言的），我们先来对比一下。
-Hugo与同类工具相比的优势和劣势 目前已经没有多少人用jekyll了，大多数开发者会选择hugo和hexo，所以网上对比比较多的也是它们，笔者也主要将这两者做对比。
-搭建方面 Hugo只是一个用Go语言编写的二进制文件，开箱即用，只要使用者拥有服务器或GitHub账号，就可以轻松生成。
-Hexo需要配置环境（Nodejs和git），相比Hugo略显麻烦。
-生态方面 Hugo的主题没有Hexo多（只是少十几个），在国内教程较少，英文文档并不易懂，写的稍烂。
-Hexo主题稍微多一些，在国内教程较多（在知乎就能见到不少标题为“GitHub&#43;Hexo半小时免费搭建博客”之类的文章），文档虽然说不上好读，但胜在生态丰富，很多人帮着讲解。
-性能方面 Hugo的性能要显著高于jekyll和Hexo，曾经有人做过实验，这三种生成器生成585篇文章，分别需要的时间（单位：秒）为：
-Jekyll: 15.90 Hugo: 4.90 Hexo的数据应当介于二者之间。 之所以会出现差距，是因为这三种生成器使用的语言不同，准确的说，是语言类型不同。
-Hugo使用Go（编译型语言）；Hexo使用nodejs（解释型语言）；jekyll使用ruby（解释型语言）。
-编译型语言执行效率高于解释型语言，而同为解释型语言，nodejs的V8引擎比ruby要快。
-费用方面 Hugo、Hexo、Jekyll都是开源免费的工具，从搭建到维护不需要花费任何费用。
-wordpress据说是很好的工具，不过我并没有深入使用过，这也是今天在这篇博文中我没怎么写到它的原因，既然我不够了解它，无法判断优劣，也就不在这里乱写。
-我之所以无法投入使用这款工具，是因为使用它搭建网站需要服务器，而我暂时没有钱来购买，等到我日后有了一定的使用经验，再回到这篇博文来补充。
-使用Hugo创建网站 相信能看到这里的你一定是决定了使用Hugo创建网站的人，所以我们开始。
-安装Hugo Windows安装，可以去到GitHub，链接在此。
-如果你不会使用GitHub，请在最新版本下的Assets中选择与自己电脑对应的安装包，单击，选择好安装位置，就可以开始下载了。（建议下载扩展版本，因为很多漂亮的主题都需要扩展版本中的sass等）
-下载完毕后打开文件夹应该会看到hugo的zip文件，使用解压工具（如7-zip）解压缩文件，得到hugo.exe，之后要将hugo.exe复制到建立的网站的目录中。
-官网文档中还有其它的下载方式，不过，我觉得用scoop等包管理器下载要更难一些……还是只说这一种吧，最简单了。
-终端操作 打开cmder等终端工具，cd至hugo的工作目录，输入hugo version命令，检查hugo版本，如果出现一串号码（例如：hugo v0.101.0-466fa43c16709b4483689930a4f9ac8add5c9f66&#43;extended windows/amd64 BuildDate=2022-06-16T07:09:16Z VendorInfo=gohugoio），说明你安装成功了，可以输入hugo help获取帮助，查看所有命令参数，不过看看就好，很多的命令，初学者用不上，如果只是使用hugo撰写博客的话，只需要记住诸如hugo new post 、hugo之类就可以了。
-version
-输入hugo help出现的参数如下：
-hugo is the main command, used to build your Hugo site.</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2022/10/23 · 
-    
-        
-    
 
-    
+        </div>
         
-            <span>Posts</span>
-        
+<div class="balloon-line-container">
     
-</span>
-                </div>
-            </div>
-        </a>
-    
-        <a href="https://fcjz.github.io/blog/post/text/">
-            <div class="postcard-item">
-                <div class="postcard-title">
-                    <span>互联网的产出在渐渐枯萎吗？</span>
-                </div>
-                <div class="postcard-summary">
-                    <span>最近在知乎上看到这样一个问题：互联网的产出在渐渐枯萎吗？
-其实前面应该加上一个简中，毕竟原问题说的就是简中互联网的近况，不过高赞回答中“不只是简中，全世界的产出都在渐渐枯萎，只是简中环境要快一些”的论点我比较赞同，所以我连同墙外的情况一起说。
-结论 如果让我回答这个问题，我会说：
-“是的，世界互联网的产出都在渐渐枯萎，大众沉浸在封闭的社交孤岛中，简中环境下，公众号、微博、豆瓣、知乎、B站；墙外环境下，推特、脸书、Instagram、tumblr。的确，墙外的geek要更多一些，明白要在互联网上独立自由生存并为之做出努力的geek也更多，不过这无法阻止社交媒体的横行——geek本来就是小众不被大众理解的“疯子”群体，绝大多数人只觉得他们对社交媒体的排斥毫无意义——人们不关心去中心化——早已不知道blog到底是些什么东西有什么存在的意义——许多人现在除工作场合根本不用Email——IRC和RSS，我不知道还剩下多少人知道这两个概念——
-但是，我仍然抱有希望，我看到很多博主的努力，看到他们在自己的“一亩三分地”辛苦地耕耘，看到他们在延续互联网的精神。
-我相信，不久以后，互联网会爆发革命，哪怕只是一群人的狂欢，也能带来一阵子的返璞归真。
-但愿我还可以看见充满个性的互联网而不是死板的社交媒体个人主页。”
-社交孤岛 当今社会，大众居住在一座座孤岛上，没有联系，没有个性，只剩下展示、点赞、评论，以及资本家获得的流量密码。
-大家都心安理得地住着，麻木地点赞、评论、转发……周而复始。
-我并不否认这种做法，无论是追求互联网上独特的个人空间还是只是一个可以聊天分享的社交媒体，都是个人的生活方式，都应该受到尊重。
-可是我不推广这种做法，这种将自己的数据寄留在大公司的服务器上，寄托在创始人的良心上。我对这种生活方式表示尊重，但开发这项服务并从中获利的人也许并不会。
-多少关闭的博客平台证实了这点。你将自己最珍贵的回忆与知识写在上面日夜维护，明天服务商就可能倒闭关停博客，连句再见都不会说。</span>
-                </div>
-                <div class="postcard-metadata">
-                    <span>2022/08/22 · 
-    
-        
-    
-
-    
-        
-            <span>Posts</span>
-        
-    
-</span>
-                </div>
-            </div>
-        </a>
-    
+    <div class="balloon-line" style="width: 2px"></div>
     
 </div>
 
+    </div>
+    
+    <div class="balloon-head-item-mobile">
+        <div class="balloon-head-item-img-light">
+            
+    <div class="balloon-head-item-img">
+        <img alt="balloon_head" src='/blog/icons/x.svg' >
+    </div>
+
+
+        </div>
+        <div class="balloon-head-item-img-dark">
+            
+    <div class="balloon-head-item-img">
+        <img alt="balloon_head" src='/blog/icons/x_dark.svg' >
+    </div>
+
+
+        </div>
+    </div>
+
+    <div class="balloon-head-item-content">
+
+<article class="line-numbers">
+    
+    
+    
+
+
+<div class="icon">
+    
+        <a rel="noopener" target="_blank" href="https://github.com/fcjz" aria-label="github">
+    
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+    
+        </a>
+    
+</div>
+
+
+
+
+<div class="icon">
+    
+        <a rel="noopener" target="_blank" href="imagine-cyf@yandex.com" aria-label="mail">
+    
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    
+        </a>
+    
+</div>
+
+<p>This is a blog by fcjz.</p>
+
+</article>
+</div>
+</div>
+
+
+        
+        
+
+        
+            <span>There is no page under /about. You need to specify &#34;balloon_resources&#34; correctly in front-matter and check the existence of posts under this folder.</span>
+        
+    </div>
 
 
 
