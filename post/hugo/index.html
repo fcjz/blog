@@ -39,6 +39,10 @@
 PS：本文主要面向Windows用户、独立开发者、开源工作者以及想要拥有一个博客的普通用户。
 命令行终端推荐使用cmder或者git bash。
 我在“About Me”这篇博文中提到过这个博客是使用Hugo制作的，那么Hugo究竟是什么呢？它与同类工具相比有哪些优势和劣势？怎样使用它创建一个属于自己的博客呢？
+准备 一台电脑，Windows/macOS/Linux（macOS相对简单一些，但这不代表其他两种操作系统不行）
+最好有一个科学上网/网络加速工具（用于访问GitHub、使用git部署博客）
+一个markdown编辑器，如typora，其实vscode是不错的选择
+最好下载一个更加好用的命令行终端工具，比如cmder，不过系统自带的未必不好，如果你觉得用它们就好，也可以
 Hugo Hugo是一个开源的静态网站生成器，简单好用，方便快速、生态丰富，被许多开发者用来搭建博客。我想了想，在我接触过的网站生成器中（Hugo、Hexo、Gridea、Jekyll、Ghost、wordpress、typecho……），目前能够和Hugo比肩的，只有Hexo和wordpress，然而，Hexo配置环境麻烦，博文达到一定数量之后性能会明显下降；wordpress需要使用者购买服务器（wordpress生成的是动态网站），大多数年轻的开发者没有精力和财力去维护这样一个博客，他们只是偶尔记录些什么（不过，如果在看本文的你手头上有闲置的服务器，并且是一个对功能要求比较高的用户，那么wordpress是个很好的选择——功能丰富、易于维护、适合新手）。
 让我提出几个问题，如果你对下面问题的回答是肯定的，那么我非常欢迎你继续看下去，因为这样的话，Hugo非常适合你：
 你是否要写许多博文，并且持续维护这个博客？ 你是否希望在博文数量达到一定程度的时候生成器的性能不会受到很大影响？ 你是否讨厌配置环境（有些生成器工作需要配合其它工具，安装那些工具的过程我们叫做配置环境）？ 你是否有一定的“折腾能力”（评论之类的功能需要你自己挖掘实现）？ 你是否希望能够快速完成建立博客这个过程（笔者花了半个小时左右）（如果你不想添加别的什么功能，只想写博文的话）？ 我们假设你对它们的回答是肯定的，为了让你更清楚Hugo与其它生成器的优点和缺点（好吧，这里的优点和缺点也都是针对笔者的需求而言的），我们先来对比一下。
@@ -197,6 +201,7 @@ if (!doNotTrack) {
         
             <nav id="TableOfContents">
   <ul>
+    <li><a href="#准备">准备</a></li>
     <li><a href="#hugo">Hugo</a></li>
     <li><a href="#hugo与同类工具相比的优势和劣势">Hugo与同类工具相比的优势和劣势</a>
       <ul>
@@ -212,6 +217,7 @@ if (!doNotTrack) {
         <li><a href="#终端操作">终端操作</a></li>
       </ul>
     </li>
+    <li><a href="#使用github-pages部署博客">使用GitHub pages部署博客</a></li>
     <li><a href="#参考链接">参考链接</a></li>
     <li><a href="#收尾">收尾</a></li>
   </ul>
@@ -226,12 +232,27 @@ if (!doNotTrack) {
 <article class="line-numbers">
     
     
-    <p><a href="images/hugo.png">hugo</a></p>
+    <p><a href="/images/hugo.png">hugo</a></p>
 <p>当今时代，我认为拥有一个独特的博客是十分有趣且重要的，详情请看之前的“简中互联网的产出枯萎了吗？”的博文，我在其中写到了很多有关博客的资料。</p>
 <p>那么我们现在进入正题，今天的主角是Hugo。</p>
 <p>PS：本文主要面向Windows用户、独立开发者、开源工作者以及想要拥有一个博客的普通用户。</p>
 <p>命令行终端推荐使用cmder或者git bash。</p>
 <p>我在“About Me”这篇博文中提到过这个博客是使用Hugo制作的，那么Hugo究竟是什么呢？它与同类工具相比有哪些优势和劣势？怎样使用它创建一个属于自己的博客呢？</p>
+<h2 id="准备">准备</h2>
+<ul>
+<li>
+<p>一台电脑，Windows/macOS/Linux（macOS相对简单一些，但这不代表其他两种操作系统不行）</p>
+</li>
+<li>
+<p>最好有一个科学上网/网络加速工具（用于访问GitHub、使用git部署博客）</p>
+</li>
+<li>
+<p>一个markdown编辑器，如typora，其实vscode是不错的选择</p>
+</li>
+<li>
+<p>最好下载一个更加好用的命令行终端工具，比如cmder，不过系统自带的未必不好，如果你觉得用它们就好，也可以</p>
+</li>
+</ul>
 <h2 id="hugo">Hugo</h2>
 <p>Hugo是一个开源的静态网站生成器，简单好用，方便快速、生态丰富，被许多开发者用来搭建博客。我想了想，在我接触过的网站生成器中（Hugo、Hexo、Gridea、Jekyll、Ghost、wordpress、typecho……），目前能够和Hugo比肩的，只有Hexo和wordpress，然而，Hexo配置环境麻烦，博文达到一定数量之后性能会明显下降；wordpress需要使用者购买服务器（wordpress生成的是动态网站），大多数年轻的开发者没有精力和财力去维护这样一个博客，他们只是偶尔记录些什么（不过，如果在看本文的你手头上有闲置的服务器，并且是一个对功能要求比较高的用户，那么wordpress是个很好的选择——功能丰富、易于维护、适合新手）。</p>
 <p>让我提出几个问题，如果你对下面问题的回答是肯定的，那么我非常欢迎你继续看下去，因为这样的话，Hugo非常适合你：</p>
@@ -277,8 +298,8 @@ Hexo的数据应当介于二者之间。
 <p>输入<code>hugo help</code>出现的参数如下：</p>
 <blockquote>
 <p>hugo is the main command, used to build your Hugo site.</p>
-<p>Hugo is a Fast and Flexible Static Site Generator
-built with love by spf13 and friends in Go.</p>
+<p>Hugo is a Fast and Flexible Static Site Generator</p>
+<p>built with love by spf13 and friends in Go.</p>
 <p>Complete documentation is available at <a href="https://gohugo.io/">https://gohugo.io/</a>.</p>
 <p>Usage:</p>
 <blockquote>
@@ -287,73 +308,108 @@ hugo [command]</p>
 </blockquote>
 <p>Available Commands:</p>
 <blockquote>
-<p>completion  Generate the autocompletion script for the specified shell
-config      Print the site configuration
-convert     Convert your content to different formats
-deploy      Deploy your site to a Cloud provider.
-env         Print Hugo version and environment info
-gen         A collection of several useful generators.
-help        Help about any command
-import      Import your site from others.
-list        Listing out various types of content
-mod         Various Hugo Modules helpers.
-new         Create new content for your site
-server      A high performance webserver
-version     Print the version number of Hugo</p>
+<p>completion  Generate the autocompletion script for the specified shell</p>
 </blockquote>
+</blockquote>
+<p>config      Print the site configuration</p>
+<p>convert     Convert your content to different formats</p>
+<p>deploy      Deploy your site to a Cloud provider.</p>
+<p>env         Print Hugo version and environment info</p>
+<p>gen         A collection of several useful generators.</p>
+<p>help        Help about any command</p>
+<p>import      Import your site from others.</p>
+<p>list        Listing out various types of content</p>
+<p>mod         Various Hugo Modules helpers.</p>
+<p>new         Create new content for your site</p>
+<p>server      A high performance webserver</p>
+<p>version     Print the version number of Hugo</p>
+<blockquote>
 <p>Flags:</p>
 <blockquote>
-<p>-b, &ndash;baseURL string             hostname (and path) to the root, e.g. <a href="https://spf13.com/">https://spf13.com/</a>
--D, &ndash;buildDrafts                include content marked as draft
--E, &ndash;buildExpired               include expired content
--F, &ndash;buildFuture                include content with publishdate in the future
-&ndash;cacheDir string            filesystem path to cache directory. Defaults: $TMPDIR/hugo_cache/
-&ndash;cleanDestinationDir        remove files from destination not found in static directories
-&ndash;clock string               set the clock used by Hugo, e.g. &ndash;clock 2021-11-06T22:30:00.00+09:00
-&ndash;config string              config file (default is path/config.yaml|json|toml)
-&ndash;configDir string           config dir (default &ldquo;config&rdquo;)
--c, &ndash;contentDir string          filesystem path to content directory
-&ndash;debug                      debug output
--d, &ndash;destination string         filesystem path to write files to
-&ndash;disableKinds strings       disable different kind of pages (home, RSS etc.)
-&ndash;enableGitInfo              add Git revision, date, author, and CODEOWNERS info to the pages
--e, &ndash;environment string         build environment
-&ndash;forceSyncStatic            copy all files when static is changed.
-&ndash;gc                         enable to run some cleanup tasks (remove unused cache files) after the build
--h, &ndash;help                       help for hugo
-&ndash;ignoreCache                ignores the cache directory
-&ndash;ignoreVendorPaths string   ignores any _vendor for module paths matching the given Glob pattern
--l, &ndash;layoutDir string           filesystem path to layout directory
-&ndash;log                        enable Logging
-&ndash;logFile string             log File path (if set, logging enabled automatically)
-&ndash;minify                     minify any supported output format (HTML, XML etc.)
-&ndash;noBuildLock                don&rsquo;t create .hugo_build.lock file
-&ndash;noChmod                    don&rsquo;t sync permission mode of files
-&ndash;noTimes                    don&rsquo;t sync modification time of files
-&ndash;panicOnWarning             panic on first WARNING log
-&ndash;poll string                set this to a poll interval, e.g &ndash;poll 700ms, to use a poll based approach to watch for file system changes
-&ndash;printI18nWarnings          print missing translations
-&ndash;printMemoryUsage           print memory usage to screen at intervals
-&ndash;printPathWarnings          print warnings on duplicate target paths etc.
-&ndash;printUnusedTemplates       print warnings on unused templates.
-&ndash;quiet                      build in quiet mode
-&ndash;renderToMemory             render to memory (only useful for benchmark testing)
--s, &ndash;source string              filesystem path to read files relative from
-&ndash;templateMetrics            display metrics about template executions
-&ndash;templateMetricsHints       calculate some improvement hints when combined with &ndash;templateMetrics
--t, &ndash;theme strings              themes to use (located in /themes/THEMENAME/)
-&ndash;themesDir string           filesystem path to themes directory
-&ndash;trace file                 write trace to file (not useful in general)
--v, &ndash;verbose                    verbose output
-&ndash;verboseLog                 verbose logging
--w, &ndash;watch                      watch filesystem for changes and recreate as needed</p>
+<p>-b, &ndash;baseURL string             hostname (and path) to the root, e.g. <a href="https://spf13.com/">https://spf13.com/</a></p>
 </blockquote>
+</blockquote>
+<p>-D, &ndash;buildDrafts                include content marked as draft</p>
+<p>-E, &ndash;buildExpired               include expired content</p>
+<p>-F, &ndash;buildFuture                include content with publishdate in the future</p>
+<pre><code>  --cacheDir string            filesystem path to cache directory. Defaults: $TMPDIR/hugo_cache/
+
+  --cleanDestinationDir        remove files from destination not found in static directories
+
+  --clock string               set the clock used by Hugo, e.g. --clock 2021-11-06T22:30:00.00+09:00
+
+  --config string              config file (default is path/config.yaml|json|toml)
+
+  --configDir string           config dir (default &quot;config&quot;)
+</code></pre>
+<p>-c, &ndash;contentDir string          filesystem path to content directory</p>
+<pre><code>  --debug                      debug output
+</code></pre>
+<p>-d, &ndash;destination string         filesystem path to write files to</p>
+<pre><code>  --disableKinds strings       disable different kind of pages (home, RSS etc.)
+
+  --enableGitInfo              add Git revision, date, author, and CODEOWNERS info to the pages
+</code></pre>
+<p>-e, &ndash;environment string         build environment</p>
+<pre><code>  --forceSyncStatic            copy all files when static is changed.
+
+  --gc                         enable to run some cleanup tasks (remove unused cache files) after the build
+</code></pre>
+<p>-h, &ndash;help                       help for hugo</p>
+<pre><code>  --ignoreCache                ignores the cache directory
+
+  --ignoreVendorPaths string   ignores any _vendor for module paths matching the given Glob pattern
+</code></pre>
+<p>-l, &ndash;layoutDir string           filesystem path to layout directory</p>
+<pre><code>  --log                        enable Logging
+
+  --logFile string             log File path (if set, logging enabled automatically)
+
+  --minify                     minify any supported output format (HTML, XML etc.)
+
+  --noBuildLock                don't create .hugo_build.lock file
+
+  --noChmod                    don't sync permission mode of files
+
+  --noTimes                    don't sync modification time of files
+
+  --panicOnWarning             panic on first WARNING log
+
+  --poll string                set this to a poll interval, e.g --poll 700ms, to use a poll based approach to watch for file system changes
+
+  --printI18nWarnings          print missing translations
+
+  --printMemoryUsage           print memory usage to screen at intervals
+
+  --printPathWarnings          print warnings on duplicate target paths etc.
+
+  --printUnusedTemplates       print warnings on unused templates.
+
+  --quiet                      build in quiet mode
+
+  --renderToMemory             render to memory (only useful for benchmark testing)
+</code></pre>
+<p>-s, &ndash;source string              filesystem path to read files relative from</p>
+<pre><code>  --templateMetrics            display metrics about template executions
+
+  --templateMetricsHints       calculate some improvement hints when combined with --templateMetrics
+</code></pre>
+<p>-t, &ndash;theme strings              themes to use (located in /themes/THEMENAME/)</p>
+<pre><code>  --themesDir string           filesystem path to themes directory
+
+  --trace file                 write trace to file (not useful in general)
+</code></pre>
+<p>-v, &ndash;verbose                    verbose output</p>
+<pre><code>  --verboseLog                 verbose logging
+</code></pre>
+<p>-w, &ndash;watch                      watch filesystem for changes and recreate as needed</p>
+<blockquote>
 <p>Use &ldquo;hugo [command] &ndash;help&rdquo; for more information about a command.</p>
 </blockquote>
 <p>我们搭建网站要使用<code>hugo new site</code>命令，请在命令行终端输入<code>hugo new site xxx</code>（将xxx改为你自己的博客名），回车，返回hugo文件夹，你会发现多出了一个名为xxx（你博客的名字）的文件夹，恭喜，hugo已经帮你创建了网站，不过目前还无法访问，因为还缺少一些东西，我们需要补上它们。</p>
 <p>首先，我们需要将hugo.exe复制到xxx文件夹目录中，否则无法进行接下来的操作（毕竟我们没有将hugo添加到系统环境变量）。</p>
 <p>添加完之后你的网站目录应该是这样的：</p>
-<p><a href="images/content.png">content</a></p>
+<p><a href="/images/content.png">content</a></p>
 <p>接下来，我们要修改目录下的config.toml文件，要配置好languageCode和title，baseURL目前不能修改，不然之后<code>hugo server</code>会遇到困难，等到测试好网站再去修改；theme要等到配置好主题再去修改，这是我们之后要做的。</p>
 <p>将languageCode参数修改为&quot;zh-CN&quot;。</p>
 <p>将title修改为你网站的名称，随便起一个你喜欢的就好，例如&quot;xxx&rsquo;s blog&quot;。</p>
@@ -364,6 +420,126 @@ version     Print the version number of Hugo</p>
 <p>官网收集了众多主题，你可以挑选一个最喜欢的作为博客主题，另外提醒一下，挑选主题不要只看颜值高低，也要看功能如何，还得关注它所匹配的hugo版本，有些主题，例如我所使用的monochrome，需要用到hugo的扩展版本。</p>
 <p>一般来讲，主题的介绍页面都写了如何安装，基本上主题都是开源的，可以在GitHub上找到源码，可以通过GitHub链接下载。</p>
 <p>接着编辑之前的config.toml文件，配置theme为你的主题名。</p>
+<p>这是笔者的配置，可以为读者做个参考：</p>
+<pre><code class="language-示例配置">baseURL = 'https://fcjz.github.io/blog/'
+languageCode = 'en-us'
+title = 'fcjz-blog'
+theme = 'hugo-theme-monochrome'
+defaultContentLanguage = &quot;en&quot;
+enableEmoji = true
+paginate = 5
+disqusShortname = &quot;fcjz&quot;
+googleAnalytics = &quot;fcjz&quot;
+
+[params]
+author = &quot;fcjz&quot;
+enable_open_graph = false
+navbar_title = &quot;fcjz-blog&quot;
+footer = &quot;Copyright © 2022 by fcjz&quot;
+enable_toc = true
+enable_collapsible_toc = false
+enable_collapsible_changelogs = false
+enable_math = true
+enable_zooming_js = false
+enable_site_search = true
+  [params.list_layout]
+  enable_group_by_year = true
+  enable_show_date = true
+  enable_pagination = false
+  [param.syntax_highlight]
+  lib = &quot;builtin&quot;
+    [param.syntax_highlight.builtin]
+    enable_code_copy = true
+
+[markup.highlight]
+codeFences = false
+lineNos = false
+
+[taxonomies]
+category = &quot;categories&quot;
+tag = &quot;tags&quot;
+series = &quot;series&quot;
+
+[outputs]
+home = [&quot;HTML&quot;, &quot;RSS&quot;, &quot;JSON&quot;]
+
+[[menu.navbar]]
+identifier = &quot;something&quot;
+name = &quot;something&quot;
+title = &quot;about&quot;
+url = &quot;/something/&quot;
+weight = 1
+
+[[menu.navbar]]
+identifier = &quot;library&quot;
+name = &quot;library&quot;
+url = &quot;/library/&quot;
+weight = 2
+
+[[menu.navbar]]
+identifier = &quot;post&quot;
+name = &quot;post&quot;
+url = &quot;/post/&quot;
+weight = 3
+
+[[menu.navbar]]
+identifier = &quot;now&quot;
+name = &quot;now&quot;
+url = &quot;/now/&quot;
+weight = 4
+</code></pre>
+<p>做完这些，你其实已经可以使用命令运行hugo的内置服务器，在本地端口查看效果的，但是空有一个主题，博客里空空荡荡的实在不好看，而且你应当先熟悉一下markdown的使用，所以让我们使用<code>hugo new post/xxx.md</code>命令新建一篇博文吧。</p>
+<p>要使用markdown撰写文章，你需要有一个编辑器，typora是一个很有名的工具，不过闭源，且这两年已经转到了付费模式，我更推荐vscode，虽然它是一个代码编辑器甚至IDE，但优秀的代码编辑器和优秀的markdown编辑器并不冲突。它的插件市场中有非常好用的编辑预览插件，事实上，我大多数时间并不用它写代码，而是写博文……好了现在不是说这个的时候。</p>
+<p>如果不出意外，返回content中的post文件夹，你会看到一个崭新的md文件，将它点开，随便写点什么吧，实在不知道写什么可以打“HelloWorld”，不错的话术，是优秀的示例，你会发现很多项目在引导入门者时都喜欢用HelloWorld。</p>
+<p>建议你去学习一些markdown的语法知识，这会对你今后写博文有所帮助，如果你只知道“#”、“##”的话，虽然说仍然能够正常使用，但想要添加一些独特的形式表达文字会变得困难。</p>
+<p>当你完成了一篇令自己满意的博文，例如：</p>
+<pre><code>---
+title: &quot;firstpost&quot;
+date: 2022-11-29T16:56:21+08:00
+draft: true
+---
+
+HelloWorld！
+</code></pre>
+<p>就可以保存，回到命令行终端，键入<code>hugo server -d</code>，在<code>localhost:1313</code>端口预览博客效果了，希望你能对自己的博客感到满意。</p>
+<p>如果你按照上述的博文示例写了博文保存预览，只输入了<code>hugo server</code>，省略了<code>-d</code>，你会发现预览的博客中没有文章，这是因为draft的设置为“true”，也就是这是一篇草稿文章，并没有正式发布，<code>-d</code>的意思是显示带草稿文章的预览，所以你可以看见文章。</p>
+<p>如果你想正式发表这篇文章，请将draft的设置改为“false”。</p>
+<p>到这里，博客的配置和博文的发表就已经结束了。</p>
+<p>但是现在只有你能够看到博客和其中的内容，互联网上的其他人根本不知道有这么一个小角落存在，那么，在不花费费用的前提下，该怎么将博客部署成网站，让人们看到它呢？</p>
+<h2 id="使用github-pages部署博客">使用GitHub pages部署博客</h2>
+<p>笔者使用的是git bash，很多用户对于技术并不熟悉，这样的话可以选用GitHub desktop，这是一个git的图形化工具，也就是，有形象的界面，不像命令行那样冷冰冰的（不过很多geek中意冷冰冰的风格）。</p>
+<p>GitHub desktop的使用非常简单，这里不再多说，我们主要说命令行，这也是笔者比较熟悉的。</p>
+<!-- raw HTML omitted -->
+<p>GitHub是一个开源社区、一个代码托管平台，具备一系列完整的开源项目工作流程，你可以在其中找到各种各样的资源，学习并增长技术，挖掘好用的工具和值得关注的程序员。</p>
+<p>GitHub的官网为https://github.com ，很好记的，访问这个链接，先欣赏一下它酷炫的首页，然后点击右上角的“Sigh Up”，填写你的相关信息，完成注册流程，配置……
+<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p>建立一个名为&quot;xxx.github.io&quot;的仓库（将xxx改为你的GitHub用户名）是最好的（暂时不要添加readme和许可证），如果你想建一个和这个不同名称的仓库来托管博客，要记住，博客部署之后的链接一定不会是xxx.github.io，而是xxx.github.io/yyy（yyy是你的仓库名）。</p>
+<p>在命令行终端键入<code>hugo</code>生成静态网站到本地的public文件夹（之前截图中的public，不是别处的public）。</p>
+<p>点进文件夹，右键选中<code>git bash here</code>，打开git，登录git，键入以下命令：</p>
+<pre><code>git remote add origin https://github.com/xxx/xxx.github.io （xxx是你的GitHub用户名，再强调一遍，注意大小写，如果你的仓库不叫xxx.github.io，就写仓库名字。这个命令是建立起本地和GitHub远程仓库之间的联系）
+
+git add -A （这里会弹出一堆警告，可以忽视）
+
+git status （这里是检查仓库情况）
+
+git commit -m &quot;abcd&quot; （这里是提交，abcd为提交信息，可以替换为&quot;add new post&quot;之类，实际上只要是英文随便写点什么都行，不过建议还是好好对待自己的提交信息，这样以后遇到什么问题可以回退历史记录，commit信息可以帮助你明确这么多次提交博客的自己到底干了什么）
+
+git push -u origin master （与远程仓库同步，也是最后一步，嗯，理论上的最后一步，如果你的网络没有问题的话）
+</code></pre>
+<p>GitHub提供一个名叫GitHub pages的工具，可以帮你托管静态网站，包括我们现在的这个静态博客，点击仓库上方工具栏的“setting”，侧边栏点击“GitHub pages”，选择部署根目录（root）为master，save保存，等待几分钟，访问xxx.github.io或xxx.github.io/yyy，你可以看到你的博客。</p>
+<p>之后如果有博文更新或者修改一些配置，重复之前的流程：</p>
+<p>撰写博文后保存，命令行终端<code>hugo</code>生成静态网站到public。</p>
+<p>转到public文件夹右键打开git bash，这个时候因为我们已经建立了远程仓库，所以不用再次绑定了，不在输入git remote命令。</p>
+<pre><code>git add
+
+git commit -m &quot;abcd&quot;
+
+git push -u origin master
+</code></pre>
+<p>等待几分钟，博客就更新成功了。</p>
+<p>接下来，我会撰写几篇有关git和GitHub的博文，如果你在进行上述操作中遇到了问题，可以来看这两篇博文，到时候我会将链接附在相关链接上，哦，也许我现在就应该搜集一些有关GitHub和git的博文。</p>
+<p>祝你建站愉快。</p>
 <h2 id="参考链接">参考链接</h2>
 <ul>
 <li>

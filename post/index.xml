@@ -6,7 +6,16 @@
     <description>Recent content in Posts on fcjz-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Oct 2022 14:33:34 +0800</lastBuildDate><atom:link href="https://fcjz.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Nov 2022 16:56:21 +0800</lastBuildDate><atom:link href="https://fcjz.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于社交媒体</title>
+      <link>https://fcjz.github.io/blog/post/socialmedia/</link>
+      <pubDate>Tue, 29 Nov 2022 16:56:21 +0800</pubDate>
+      
+      <guid>https://fcjz.github.io/blog/post/socialmedia/</guid>
+      <description>最近，在埃隆·马斯克的新闻中，我加深了对twitter、微博、Facebook、Instagram、tumblr、mastodon的了解，于是我开始尝试着撰写一篇有关社交媒体的博文，讨论我对社交媒体的看法，嗯，对这些个社交媒体平台的看法，以及对社交媒体本身，我都希望能够涉及到。</description>
+    </item>
+    
     <item>
       <title>使用Hugo制作博客</title>
       <link>https://fcjz.github.io/blog/post/hugo/</link>
@@ -19,6 +28,10 @@
 PS：本文主要面向Windows用户、独立开发者、开源工作者以及想要拥有一个博客的普通用户。
 命令行终端推荐使用cmder或者git bash。
 我在“About Me”这篇博文中提到过这个博客是使用Hugo制作的，那么Hugo究竟是什么呢？它与同类工具相比有哪些优势和劣势？怎样使用它创建一个属于自己的博客呢？
+准备 一台电脑，Windows/macOS/Linux（macOS相对简单一些，但这不代表其他两种操作系统不行）
+最好有一个科学上网/网络加速工具（用于访问GitHub、使用git部署博客）
+一个markdown编辑器，如typora，其实vscode是不错的选择
+最好下载一个更加好用的命令行终端工具，比如cmder，不过系统自带的未必不好，如果你觉得用它们就好，也可以
 Hugo Hugo是一个开源的静态网站生成器，简单好用，方便快速、生态丰富，被许多开发者用来搭建博客。我想了想，在我接触过的网站生成器中（Hugo、Hexo、Gridea、Jekyll、Ghost、wordpress、typecho……），目前能够和Hugo比肩的，只有Hexo和wordpress，然而，Hexo配置环境麻烦，博文达到一定数量之后性能会明显下降；wordpress需要使用者购买服务器（wordpress生成的是动态网站），大多数年轻的开发者没有精力和财力去维护这样一个博客，他们只是偶尔记录些什么（不过，如果在看本文的你手头上有闲置的服务器，并且是一个对功能要求比较高的用户，那么wordpress是个很好的选择——功能丰富、易于维护、适合新手）。
 让我提出几个问题，如果你对下面问题的回答是肯定的，那么我非常欢迎你继续看下去，因为这样的话，Hugo非常适合你：
 你是否要写许多博文，并且持续维护这个博客？ 你是否希望在博文数量达到一定程度的时候生成器的性能不会受到很大影响？ 你是否讨厌配置环境（有些生成器工作需要配合其它工具，安装那些工具的过程我们叫做配置环境）？ 你是否有一定的“折腾能力”（评论之类的功能需要你自己挖掘实现）？ 你是否希望能够快速完成建立博客这个过程（笔者花了半个小时左右）（如果你不想添加别的什么功能，只想写博文的话）？ 我们假设你对它们的回答是肯定的，为了让你更清楚Hugo与其它生成器的优点和缺点（好吧，这里的优点和缺点也都是针对笔者的需求而言的），我们先来对比一下。
