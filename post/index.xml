@@ -6,22 +6,7 @@
     <description>Recent content in Posts on fcjz-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Mar 2023 00:00:45 +0800</lastBuildDate><atom:link href="https://fcjz.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>搭建非线性个人网络笔记本——Tiddlywiki</title>
-      <link>https://fcjz.github.io/blog/post/tiddlywiki/</link>
-      <pubDate>Thu, 09 Mar 2023 00:00:45 +0800</pubDate>
-      
-      <guid>https://fcjz.github.io/blog/post/tiddlywiki/</guid>
-      <description>搭建非线性个人网络笔记本——Tiddlywiki TiddlyWiki是我从去年上半年了解到的知识管理工具，特点是功能丰富、开发活跃、自定义程度高，不过这也是它的缺点——有一些知识管理爱好者的确无法接收如此多用不上的功能，对于他们而言，只想好好记个笔记，那么这的确不是TW的受众，我个人非常喜欢使用TW，也使用它配置了自己的公开数字花园网站，学习安装、使用和部署的过程只能说是十分陡峭，而TW的文档恰恰又不够细致，教程对于很多用户来说更多的是解决基本问题，如果在部署过程中出了错，并没有详细的说明，那么，今天我就将我个人的经验与TW使用的教程结合起来，便于读者理解和解决问题。
-此教程主要针对NodeJS版Wiki，单文件版我目前用来部署网站，之前一直在使用，也会提一提。
-为什么使用TiddlyWiki？ 这个问题应该会有无数种答案，正如我开头时所说，它的特点是“功能丰富、开发活跃、自定义程度高”，但这样的话实在有点空，如果让我个人来说，那就是——有趣。
-在TW中，你可以像搭积木一样在你的Wiki中运用各种姿势展现条目，非常方便地实现条目管理和复用，你可以在Wiki首页建立一个你认为有趣的条目的目录，也许是折叠，也许是侧边栏，找一个你喜欢的方式放置；你可以在其中回答问题、写日记添加心情表情，使用宏和微件添加许多炫酷又不失实用的功能；你可以通过添加特殊标签和字段插入代码更改Wiki样式，让它成为你喜欢的样子。
-还可以用它方便地搭建网站，TW的公开网站现如今已经不少，每个都有自己的特色功能，有些条目众多内容丰富，有些功能齐全模板优秀，有些已经自定义到看不出是TW了。
-TW的用途也不仅仅局限于记笔记，虽然开发者创立它的初衷的确是知识管理，但已经有教学用途、购物用途之类，群里甚至有朋友分享过一个老虎机网站，使用TW经典版制作……
-TW是个充满可能性的工具，它自己就可以是一种哲学，如果你不看教程就自己琢磨使用的话，这点更是如此，因为你永远也不会知道输入在命令行的内容到底会报出什么样的错误……让人心惊胆战，却又乐在其中，可谓屡战屡败，屡败屡战。</description>
-    </item>
-    
+    <lastBuildDate>Wed, 04 Jan 2023 14:33:34 +0800</lastBuildDate><atom:link href="https://fcjz.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>写给2023</title>
       <link>https://fcjz.github.io/blog/post/newyear/</link>
