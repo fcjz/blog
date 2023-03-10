@@ -21,6 +21,8 @@
     <title>搭建非线性个人网络笔记本——Tiddlywiki - fcjz-blog</title>
 
     
+    <meta name="description" content="TiddlyWiki使用与部署教程" />
+    
 
     
 
@@ -33,13 +35,7 @@
     
         <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="搭建非线性个人网络笔记本——Tiddlywiki"/>
-<meta name="twitter:description" content="搭建非线性个人网络笔记本——Tiddlywiki TiddlyWiki是我从去年上半年了解到的知识管理工具，特点是功能丰富、开发活跃、自定义程度高，不过这也是它的缺点——有一些知识管理爱好者的确无法接收如此多用不上的功能，对于他们而言，只想好好记个笔记，那么这的确不是TW的受众，我个人非常喜欢使用TW，也使用它配置了自己的公开数字花园网站，学习安装、使用和部署的过程只能说是十分陡峭，而TW的文档恰恰又不够细致，教程对于很多用户来说更多的是解决基本问题，如果在部署过程中出了错，并没有详细的说明，那么，今天我就将我个人的经验与TW使用的教程结合起来，便于读者理解和解决问题。
-此教程主要针对NodeJS版Wiki，单文件版我目前用来部署网站，之前一直在使用，也会提一提。
-为什么使用TiddlyWiki？ 这个问题应该会有无数种答案，正如我开头时所说，它的特点是“功能丰富、开发活跃、自定义程度高”，但这样的话实在有点空，如果让我个人来说，那就是——有趣。
-在TW中，你可以像搭积木一样在你的Wiki中运用各种姿势展现条目，非常方便地实现条目管理和复用，你可以在Wiki首页建立一个你认为有趣的条目的目录，也许是折叠，也许是侧边栏，找一个你喜欢的方式放置；你可以在其中回答问题、写日记添加心情表情，使用宏和微件添加许多炫酷又不失实用的功能；你可以通过添加特殊标签和字段插入代码更改Wiki样式，让它成为你喜欢的样子。
-还可以用它方便地搭建网站，TW的公开网站现如今已经不少，每个都有自己的特色功能，有些条目众多内容丰富，有些功能齐全模板优秀，有些已经自定义到看不出是TW了。
-TW的用途也不仅仅局限于记笔记，虽然开发者创立它的初衷的确是知识管理，但已经有教学用途、购物用途之类，群里甚至有朋友分享过一个老虎机网站，使用TW经典版制作……
-TW是个充满可能性的工具，它自己就可以是一种哲学，如果你不看教程就自己琢磨使用的话，这点更是如此，因为你永远也不会知道输入在命令行的内容到底会报出什么样的错误……让人心惊胆战，却又乐在其中，可谓屡战屡败，屡败屡战。"/>
+<meta name="twitter:description" content="TiddlyWiki使用与部署教程"/>
 
     <link rel="stylesheet" href="/blog/style.min.5297c96c59a52afaa5bcda4a6cedf3813081f64025c209b25b2ee6d0c8f74d462b625ad3404a92a14d7a51b4ec0a420337ae70f426fa4bce2d5f7459a3ca7274.css" integrity="sha512-UpfJbFmlKvqlvNpKbO3zgTCB9kAlwgmyWy7m0Mj3TUYrYlrTQEqSoU16UbTsCkIDN65w9Cb6S84tX3RZo8pydA==">
 
@@ -80,6 +76,13 @@ if (!doNotTrack) {
 
 
 
+
+    
+        
+        
+            <script defer src="/blog/js/builtin-copy.56e07a74dd440b068ab36af35542ed8960865686c19fb809f38436877ac081570612cc8a913650b0c0e3073a336680c5df960e73bf7b1de83dc6aa996f2db858.js" integrity="sha512-VuB6dN1ECwaKs2rzVULtiWCGVobBn7gJ84Q2h3rAgVcGEsyKkTZQsMDjBzozZoDF35YOc797Heg9xqqZby24WA=="></script>
+        
+    
 
 
 
@@ -168,6 +171,12 @@ if (!doNotTrack) {
             <nav id="TableOfContents">
   <ul>
     <li><a href="#为什么使用tiddlywiki">为什么使用TiddlyWiki？</a></li>
+    <li><a href="#部署tiddlywiki">部署TiddlyWiki</a>
+      <ul>
+        <li><a href="#单html文件形式">单HTML文件形式</a></li>
+        <li><a href="#node-js文件夹形式">Node JS文件夹形式</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         
@@ -181,43 +190,78 @@ if (!doNotTrack) {
     
     
     <h1 id="搭建非线性个人网络笔记本tiddlywiki">搭建非线性个人网络笔记本——Tiddlywiki</h1>
-<p>TiddlyWiki是我从去年上半年了解到的知识管理工具，特点是功能丰富、开发活跃、自定义程度高，不过这也是它的缺点——有一些知识管理爱好者的确无法接收如此多用不上的功能，对于他们而言，只想好好记个笔记，那么这的确不是TW的受众，我个人非常喜欢使用TW，也使用它配置了自己的<a href="https://fcjz.github.io/notebox">公开数字花园网站</a>，学习安装、使用和部署的过程只能说是十分陡峭，而TW的文档恰恰又不够细致，教程对于很多用户来说更多的是解决基本问题，如果在部署过程中出了错，并没有详细的说明，那么，今天我就将我个人的经验与TW使用的教程结合起来，便于读者理解和解决问题。</p>
+<p>TiddlyWiki是笔者从去年上半年了解到的知识管理工具，特点是功能丰富、开发活跃、自定义程度高，不过这也是它的缺点——有一些知识管理爱好者的确无法接收如此多用不上的功能，对于他们而言，只想好好记个笔记，那么这的确不是TW的受众，我个人非常喜欢使用TW，也使用它配置了自己的<a href="https://fcjz.github.io/notebox">公开数字花园网站</a>，学习安装、使用和部署的过程只能说是十分陡峭，而TW的文档恰恰又不够细致，教程对于很多用户来说更多的是解决基本问题，如果在部署过程中出了错，并没有详细的说明，那么，今天笔者就将个人的经验与TW使用的教程结合起来，便于读者理解和解决问题。</p>
 <p>此教程主要针对NodeJS版Wiki，单文件版我目前用来部署网站，之前一直在使用，也会提一提。</p>
 <h2 id="为什么使用tiddlywiki">为什么使用TiddlyWiki？</h2>
-<p>这个问题应该会有无数种答案，正如我开头时所说，它的特点是“功能丰富、开发活跃、自定义程度高”，但这样的话实在有点空，如果让我个人来说，那就是——有趣。</p>
+<p>这个问题应该会有无数种答案，正如我开头时所说，它的特点是“功能丰富、开发活跃、自定义程度高”，但这样的话实在有点空，如果让笔者个人来说，那就是——有趣。</p>
 <p>在TW中，你可以像搭积木一样在你的Wiki中运用各种姿势展现条目，非常方便地实现条目管理和复用，你可以在Wiki首页建立一个你认为有趣的条目的目录，也许是折叠，也许是侧边栏，找一个你喜欢的方式放置；你可以在其中回答问题、写日记添加心情表情，使用宏和微件添加许多炫酷又不失实用的功能；你可以通过添加特殊标签和字段插入代码更改Wiki样式，让它成为你喜欢的样子。</p>
 <p>还可以用它方便地搭建网站，TW的公开网站现如今已经不少，每个都有自己的特色功能，有些条目众多内容丰富，有些功能齐全模板优秀，有些已经自定义到看不出是TW了。</p>
 <p>TW的用途也不仅仅局限于记笔记，虽然开发者创立它的初衷的确是知识管理，但已经有教学用途、购物用途之类，群里甚至有朋友分享过一个老虎机网站，使用TW经典版制作……</p>
 <p>TW是个充满可能性的工具，它自己就可以是一种哲学，如果你不看教程就自己琢磨使用的话，这点更是如此，因为你永远也不会知道输入在命令行的内容到底会报出什么样的错误……让人心惊胆战，却又乐在其中，可谓屡战屡败，屡败屡战。</p>
+<h2 id="部署tiddlywiki">部署TiddlyWiki</h2>
+<p>嗯，到这里就进入本篇博文的正题了，TW是一个自包含的完整的程序，有两种使用方法：</p>
+<p>1.单HTML文件形式</p>
+<p>2.Node JS文件夹形式</p>
+<p>笔者更推荐第二种方式，可以自动保存，更新插件也更加方便，第一种形式则更加独立，不过它并没有权限覆盖自己，所以每次更新都要将Wiki重新下载一次，有些麻烦。</p>
+<p>↑唔，如果是部署网站的话，建议使用后文提到的“太记”使用方式，单文件版是直接上传同步推送到GitHub部署就可以了，如果只是单独Node JS的话，我目前只想到使用TiddlyWeb下载单文件到文件夹，再按照单文件部署的方式去做，的确麻烦。如果这方面有解决方案的朋友可以在博文最后找到我的联系方式，提出你的建议，笔者不胜感激。</p>
+<p>日常只是使用的话，确实推荐Node JS。</p>
+<h3 id="单html文件形式">单HTML文件形式</h3>
+<p>这个形式使用起来是最简单最没有门槛的，适合新手一点点摸索TW的功能。</p>
+<p>下载只需要从<a href="https://tiddlywiki.com/">TW官网</a>的Getting Started页面（往下滑就可以找到）点击下载按钮，几秒钟就可以下载完毕，在浏览器中打开可以看见开始界面，自由探索，自定义Wiki的标题和描述。</p>
+<p>你可以看到下载按钮下方有一些使用方式，其它的先看看就好，这里主要推荐timimi浏览器插件，可以自动保存和备份单文件Wiki，不会弹出下载弹窗。</p>
+<p>然后就可以开始使用了，最简单的方法是去中文教程查看各种使用方法，从最简单的做起，比如添加和编辑条目。</p>
+<p>如果这样配合着使用TW单文件形式，倒是也挺方便的，不过，timimi已经有些时间没有更新，笔者是因为它的屡次失效<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>而更换形式的。</p>
+<h3 id="node-js文件夹形式">Node JS文件夹形式</h3>
+<p>Node JS是TW的主流使用形式，需要node程序TiddlyWiki作为服务端运行，输入相应命令在指定端口打开（端口也可以自定义的，不过没有冲突的情况下，没什么必要修改）。</p>
+<p>首先，下载node到自己的电脑中:</p>
+<p>Windows系统: 可以去<a href="https://nodejs.org/">node官网</a>下载，如果网络问题无法下载，参考网络上有关安装和使用node的其它博文，本博客中暂时没有此内容，也建议学习科学上网；还可以用<a href="https://scoop.sh/">scoop</a>用命令下载这个环境，不过同样可能会遇到下载失败的问题。</p>
+<p>MacOS: 和Windows一样可以去官网下载，也可以在本地使用<code>brew install node</code>命令行下载。</p>
+<p>Linux: 使用本地命令行工具下载，不同的系统可能安装方式不一样，最好去搜索一下有无此类文章，Ubuntu可以参考<a href="https://ssine.ink/posts/tiddlywiki-setup/">这篇文章</a>。TW GitHub给出的是这样的:</p>
+<pre><code>    Debian/Ubuntu: 
+    apt install nodejs
+    May need to be followed up by: 
+    apt install npm
+    Arch Linux
+    yay -S tiddlywiki
+    (installs node and tiddlywiki)
+</code></pre>
+<p>Android: 不建议使用移动端部署TW，但如果你有这个需要，去F-Droid下载termux，按照它给出的下载命令下载node，之后依照后文步骤行动。</p>
+<p>安装完毕后在命令行键入<code>node -v</code>/<code>npm -v</code>，如果出现版本号，说明下载成功，可以开始安装TW了。</p>
+<p>在命令行键入以下命令:</p>
+<pre><code># 全局安装TW
+npm install tiddlywiki -g
+# 如果网络问题无法安装可以尝试科学上网或用淘宝镜像安装cnpm之后重新下载
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+# 使用cnpm下载TW
+cnpm install tiddlywiki -g
+# 如果出现错误则为权限不够，需要用管理员身份重试
+sudo npm install -g tiddlywiki (适用于Mac/Linux)
+# 检查TW版本看看是否成功安装
+tiddlywiki --version
+# 新建Wiki
+tiddlywiki mynewwiki --init server
+# 启动Wiki
+tiddlywiki mynewwiki --listen
+# 使用Wiki
+访问[本地服务器](localhost:8080/)
+开始编辑吧！
+</code></pre>
+<p>到这里，一般来讲，就没有什么问题了，你可以开始使用TW了。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>timimi在笔者开启浏览器一段时间后保存备份会报错，重启浏览器才能解决，不然无法保存，目前还不清楚解决方法。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
 </article>
 </div>
 
 
                 
-                    <div class="content-margin">
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "fcjz" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
+                    
                 
             </div>
 <footer>

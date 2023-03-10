@@ -6,7 +6,42 @@
     <description>Recent content in about on fcjz-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Jan 2023 14:33:34 +0800</lastBuildDate><atom:link href="https://fcjz.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Mar 2023 00:00:45 +0800</lastBuildDate><atom:link href="https://fcjz.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搭建非线性个人网络笔记本——Tiddlywiki</title>
+      <link>https://fcjz.github.io/blog/post/tiddlywiki/</link>
+      <pubDate>Thu, 09 Mar 2023 00:00:45 +0800</pubDate>
+      
+      <guid>https://fcjz.github.io/blog/post/tiddlywiki/</guid>
+      <description>搭建非线性个人网络笔记本——Tiddlywiki TiddlyWiki是笔者从去年上半年了解到的知识管理工具，特点是功能丰富、开发活跃、自定义程度高，不过这也是它的缺点——有一些知识管理爱好者的确无法接收如此多用不上的功能，对于他们而言，只想好好记个笔记，那么这的确不是TW的受众，我个人非常喜欢使用TW，也使用它配置了自己的公开数字花园网站，学习安装、使用和部署的过程只能说是十分陡峭，而TW的文档恰恰又不够细致，教程对于很多用户来说更多的是解决基本问题，如果在部署过程中出了错，并没有详细的说明，那么，今天笔者就将个人的经验与TW使用的教程结合起来，便于读者理解和解决问题。
+此教程主要针对NodeJS版Wiki，单文件版我目前用来部署网站，之前一直在使用，也会提一提。
+为什么使用TiddlyWiki？ 这个问题应该会有无数种答案，正如我开头时所说，它的特点是“功能丰富、开发活跃、自定义程度高”，但这样的话实在有点空，如果让笔者个人来说，那就是——有趣。
+在TW中，你可以像搭积木一样在你的Wiki中运用各种姿势展现条目，非常方便地实现条目管理和复用，你可以在Wiki首页建立一个你认为有趣的条目的目录，也许是折叠，也许是侧边栏，找一个你喜欢的方式放置；你可以在其中回答问题、写日记添加心情表情，使用宏和微件添加许多炫酷又不失实用的功能；你可以通过添加特殊标签和字段插入代码更改Wiki样式，让它成为你喜欢的样子。
+还可以用它方便地搭建网站，TW的公开网站现如今已经不少，每个都有自己的特色功能，有些条目众多内容丰富，有些功能齐全模板优秀，有些已经自定义到看不出是TW了。
+TW的用途也不仅仅局限于记笔记，虽然开发者创立它的初衷的确是知识管理，但已经有教学用途、购物用途之类，群里甚至有朋友分享过一个老虎机网站，使用TW经典版制作……
+TW是个充满可能性的工具，它自己就可以是一种哲学，如果你不看教程就自己琢磨使用的话，这点更是如此，因为你永远也不会知道输入在命令行的内容到底会报出什么样的错误……让人心惊胆战，却又乐在其中，可谓屡战屡败，屡败屡战。
+部署TiddlyWiki 嗯，到这里就进入本篇博文的正题了，TW是一个自包含的完整的程序，有两种使用方法：
+1.单HTML文件形式
+2.Node JS文件夹形式
+笔者更推荐第二种方式，可以自动保存，更新插件也更加方便，第一种形式则更加独立，不过它并没有权限覆盖自己，所以每次更新都要将Wiki重新下载一次，有些麻烦。
+↑唔，如果是部署网站的话，建议使用后文提到的“太记”使用方式，单文件版是直接上传同步推送到GitHub部署就可以了，如果只是单独Node JS的话，我目前只想到使用TiddlyWeb下载单文件到文件夹，再按照单文件部署的方式去做，的确麻烦。如果这方面有解决方案的朋友可以在博文最后找到我的联系方式，提出你的建议，笔者不胜感激。
+日常只是使用的话，确实推荐Node JS。
+单HTML文件形式 这个形式使用起来是最简单最没有门槛的，适合新手一点点摸索TW的功能。
+下载只需要从TW官网的Getting Started页面（往下滑就可以找到）点击下载按钮，几秒钟就可以下载完毕，在浏览器中打开可以看见开始界面，自由探索，自定义Wiki的标题和描述。
+你可以看到下载按钮下方有一些使用方式，其它的先看看就好，这里主要推荐timimi浏览器插件，可以自动保存和备份单文件Wiki，不会弹出下载弹窗。
+然后就可以开始使用了，最简单的方法是去中文教程查看各种使用方法，从最简单的做起，比如添加和编辑条目。
+如果这样配合着使用TW单文件形式，倒是也挺方便的，不过，timimi已经有些时间没有更新，笔者是因为它的屡次失效1而更换形式的。
+Node JS文件夹形式 Node JS是TW的主流使用形式，需要node程序TiddlyWiki作为服务端运行，输入相应命令在指定端口打开（端口也可以自定义的，不过没有冲突的情况下，没什么必要修改）。
+首先，下载node到自己的电脑中:
+Windows系统: 可以去node官网下载，如果网络问题无法下载，参考网络上有关安装和使用node的其它博文，本博客中暂时没有此内容，也建议学习科学上网；还可以用scoop用命令下载这个环境，不过同样可能会遇到下载失败的问题。
+MacOS: 和Windows一样可以去官网下载，也可以在本地使用brew install node命令行下载。
+Linux: 使用本地命令行工具下载，不同的系统可能安装方式不一样，最好去搜索一下有无此类文章，Ubuntu可以参考这篇文章。TW GitHub给出的是这样的:
+Debian/Ubuntu: apt install nodejs May need to be followed up by: apt install npm Arch Linux yay -S tiddlywiki (installs node and tiddlywiki) Android: 不建议使用移动端部署TW，但如果你有这个需要，去F-Droid下载termux，按照它给出的下载命令下载node，之后依照后文步骤行动。
+安装完毕后在命令行键入node -v/npm -v，如果出现版本号，说明下载成功，可以开始安装TW了。
+在命令行键入以下命令:
+# 全局安装TW npm install tiddlywiki -g # 如果网络问题无法安装可以尝试科学上网或用淘宝镜像安装cnpm之后重新下载 npm install -g cnpm --registry=https://registry.</description>
+    </item>
+    
     <item>
       <title>写给2023</title>
       <link>https://fcjz.github.io/blog/post/newyear/</link>
