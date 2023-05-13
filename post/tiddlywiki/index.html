@@ -175,8 +175,11 @@ if (!doNotTrack) {
       <ul>
         <li><a href="#单html文件形式">单HTML文件形式</a></li>
         <li><a href="#node-js文件夹形式">Node JS文件夹形式</a></li>
+        <li><a href="#tidgi形式">TidGi形式</a></li>
+        <li><a href="#p2p形式选看">P2P形式（选看）</a></li>
       </ul>
     </li>
+    <li><a href="#使用tiddlywiki">使用TiddlyWiki</a></li>
   </ul>
 </nav>
         
@@ -208,7 +211,7 @@ if (!doNotTrack) {
 <h3 id="单html文件形式">单HTML文件形式</h3>
 <p>这个形式使用起来是最简单最没有门槛的，适合新手一点点摸索TW的功能。</p>
 <p>下载只需要从<a href="https://tiddlywiki.com/">TW官网</a>的Getting Started页面（往下滑就可以找到）点击下载按钮，几秒钟就可以下载完毕，在浏览器中打开可以看见开始界面，自由探索，自定义Wiki的标题和描述。</p>
-<p>你可以看到下载按钮下方有一些使用方式，其它的先看看就好，这里主要推荐timimi浏览器插件，可以自动保存和备份单文件Wiki，不会弹出下载弹窗。</p>
+<p>你可以看到下载按钮下方有一些使用方式，其它的先看看就好，这里主要推荐<a href="https://github.com/ibnishak/Timimi">timimi浏览器插件</a>，可以自动保存和备份单文件Wiki，不会弹出下载弹窗。</p>
 <p>然后就可以开始使用了，最简单的方法是去中文教程查看各种使用方法，从最简单的做起，比如添加和编辑条目。</p>
 <p>如果这样配合着使用TW单文件形式，倒是也挺方便的，不过，timimi已经有些时间没有更新，笔者是因为它的屡次失效<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>而更换形式的。</p>
 <h3 id="node-js文件夹形式">Node JS文件夹形式</h3>
@@ -247,6 +250,49 @@ tiddlywiki mynewwiki --listen
 开始编辑吧！
 </code></pre>
 <p>到这里，一般来讲，就没有什么问题了，你可以开始使用TW了。</p>
+<p>另附上单文件和文件夹相互转换的命令：</p>
+<pre><code>
+单文件转文件夹：tiddlywiki  --load  ./mywiki.html(你的wiki文件)  --savewikifolder  ./mywikifolder(你的wiki文件夹)
+
+文件夹转单文件：请直接使用TiddlyWeb的Save snapshot for offline use.
+
+</code></pre>
+<p>不过目前我这边使用转换还存在一定的TypeError问题，仍待解决。</p>
+<h3 id="tidgi形式">TidGi形式</h3>
+<p>基于NodeJS，比起TiddlyDesktop（官方客户端，注重单文件保存相关），这个中文名叫太记的程序更受中国用户欢迎，操作简单方便，偶尔有bug，TWQ群的群主就是开发者本人，也可以直接去问，大家都很热情，可以帮忙解答（当然，除了太记和TW功能相关的探讨，你问NodeJS部署之类的问题不容易被人回答，所以折腾的话还是尽量去国外论坛）。</p>
+<p>太记官网（目前没有官网，现在都是在GitHub更新，Q群946052860也有群友发文件解决各位的网络问题）：https://github.com/tiddly-gittly/TidGi-Desktop</p>
+<p>不喜欢折腾的用户直接用模板是很舒服的，更新只需要等群主发布就可以了。</p>
+<p>缺点就是，偶尔打开会卡并且白屏（我个人使用中出现的问题），一般重启几次会好，不过我更直接的方式是在浏览器打开相应端口，将太记当命令行终端用……</p>
+<h3 id="p2p形式选看">P2P形式（选看）</h3>
+<p>这个形式来源于烧杯浏览器，一个已经archive的项目，因为TW本身就是去中心化的，所以这样保存和建站十分方便（使用就是在建网站，建完一件发表），这个项目的消逝令我感到有点不甘心，希望他日能由我或者其他的开发者创立这样一个程序。</p>
+<p>所以它在这篇博文中留有一席之地。</p>
+<h2 id="使用tiddlywiki">使用TiddlyWiki</h2>
+<p>更多教程：</p>
+<ul>
+<li>
+<p><a href="https://tw-cn.netlify.app/#%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E5%A4%AA%E5%BE%AE%EF%BC%81:%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E5%A4%AA%E5%BE%AE%EF%BC%81">太微中文教程</a></p>
+</li>
+<li>
+<p><a href="https://www.bilibili.com/video/BV1AN4y1N7ow/?vd_source=320eae679dcac24aa77b7d3f564fea2a">太微入门视频</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/555893660">太微简易指南</a></p>
+</li>
+<li>
+<p><a href="https://keatonlao.github.io/tiddlywiki-xp/">TW-XP</a></p>
+</li>
+<li>
+<p><a href="https://ssine.ink/posts/tiddlywiki-setup/">搭建非线性个人网络笔记本</a></p>
+</li>
+</ul>
+<p>最后一个年份比较长了，可能不会很适用，建议主要观看前面四个。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/485874729">国内cpl插件库</a></p>
+<p>基本上看了这些个就差不多了，但是考虑到很多人没有这个时间和精力一口气看这么多东西（不过这些其实本来也算是工具书吧？哪里不会看哪里），笔者就尽量简短的说明一下。</p>
+<p>新建维基，右上角按钮“+”号是新建笔记的按钮，红色的对勾提醒你保存，点击，如果在没有下载timimi的情况下，会弹出窗口，找个合适的位置下载新文件就是，如果安装了timimi，请在提示保存信息之后看看文件到底有没有真的保存。</p>
+<p>那个小齿轮是控制台，也就是调配功能的地方，可以换主题和配色，选择自动保存与否，配置的密度很小，再小的功能其实都可以自定义，不过有些并没有显示在明面上，如果想要更方便点，可以直接向开发者提issue，不过我想大多数新手不会想的那么多。</p>
+<p>中文包如何导入？在此请点开官方插件库（控制台plugins→目前只有一个插件库，就是它了），点开language，选择简体中文（五星红旗，简繁请自己认），下载。</p>
+<p>之后控制台的字你应该都能看懂了，自己看着配就是，出现JavaScript内部错误请刷新或复制报错内容到GitHub发issue。</p>
+<p>自定义内容请前往太微中文教程的“让太微更易用”目录查看。</p>
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <blockquote>
