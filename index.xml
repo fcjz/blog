@@ -52,63 +52,6 @@ Debian/Ubuntu: apt install nodejs May need to be followed up by: apt install npm
     </item>
     
     <item>
-      <title>Notebox</title>
-      <link>https://fcjz.github.io/blog/about/notebox/</link>
-      <pubDate>Tue, 29 Nov 2022 14:04:59 +0800</pubDate>
-      
-      <guid>https://fcjz.github.io/blog/about/notebox/</guid>
-      <description>I have a Digital Garden named notebox and it is opensource.
-notebox</description>
-    </item>
-    
-    <item>
-      <title>Links</title>
-      <link>https://fcjz.github.io/blog/about/links/</link>
-      <pubDate>Tue, 29 Nov 2022 13:56:53 +0800</pubDate>
-      
-      <guid>https://fcjz.github.io/blog/about/links/</guid>
-      <description>home:https://fcjz.github.io (This homepage is made using TiddlyWiki, it&amp;rsquo;s more in line with my personality and features, I haven&amp;rsquo;t seen such a readme so far, and I&amp;rsquo;m considering adding it to the readme.)
-blog:https://fcjz.github.io/blog
-github:https://github.com/fcjz
-gitlab:https://gitlab.com/fcjz
-npm:https://www.npmjs.com/~fcjz
-notebox:https://fcjz.github.io/notebox
-experiment:https://fcjz.github.io/experiment
-BBS:https://fcjz.freeflarum.com/
-message board:https://note.ms/fcjz
-bearblog:https://fcjz.bearblog.dev/
-pixiv:https://www.pixiv.net/users/87162343
-bangumi:https://bgm.tv/user/fcjz
-gitter:https://gitter.im/fcjz/community
-mail:imagine-cyf@yandex.com
-mastodon:https://qoto.org/@fcjz</description>
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>https://fcjz.github.io/blog/about/blog/</link>
-      <pubDate>Tue, 29 Nov 2022 13:56:37 +0800</pubDate>
-      
-      <guid>https://fcjz.github.io/blog/about/blog/</guid>
-      <description>This blog is built using hugo, a fast and easy static site builder, and the theme used for the blog is monochrome.
-The author of the blog is fcjz, and the blog post follows CC-BY-SA-3.0 protocol.
-Blog is a place for author to summarize and organize, different from digital garden notebox, blog post is usually a long article written by fragmented information after classification and fusion.</description>
-    </item>
-    
-    <item>
-      <title>About fcjz</title>
-      <link>https://fcjz.github.io/blog/about/about/</link>
-      <pubDate>Tue, 29 Nov 2022 13:53:21 +0800</pubDate>
-      
-      <guid>https://fcjz.github.io/blog/about/about/</guid>
-      <description>📝 I’m @fcjz.
-🧾 I&amp;rsquo;m a entrepreneur/Freelance.
-📑 I am interested in almost everything(Except for homework.), love to try new things, love to learn and create.
-📄 I am a student, but only a small part of my time is spent on my studies, most of the time I am obsessed with researching things that interest me.
-📃 I have no need to seek cooperation. I just signed up for GitHub to have fun, so you can see that I did not write my readme file very carefully.</description>
-    </item>
-    
-    <item>
       <title>使用Hugo制作博客</title>
       <link>https://fcjz.github.io/blog/post/hugo/</link>
       <pubDate>Sun, 23 Oct 2022 14:33:34 +0800</pubDate>
